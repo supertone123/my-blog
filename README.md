@@ -1,8 +1,21 @@
-My Blog
-Overview
-My Blog is a simple, static website built with HTML, CSS, and Node.js using the Express framework. This project serves as a personal blog where I can share updates, thoughts, and more.
+# my-blog
 
-Features
-Static Blog: A clean and minimalistic design to showcase blog content.
-Responsive Design: The blog adapts to different screen sizes for a better viewing experience on mobile and desktop devices.
-Node.js Backend: Utilizes Express to serve static files and manage routing.
+## Overview
+
+**My Blog** is a simple personal blog application built with Node.js and Express. It serves a static HTML page with a profile picture and introductory text. This project is perfect for creating a basic personal blog and learning about server-side JavaScript with Express.
+
+## Features
+
+- **Static Content Serving**: Delivers static HTML, CSS, and image files.
+- **Profile Picture**: Displays a user profile picture.
+- **Simple Layout**: Clean and minimalistic design for blogging.
+
+## Installation
+
+To set up and run My Blog locally, follow these steps:
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/YOUR_USERNAME
+>>>>>>> origin/main

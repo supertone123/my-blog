@@ -3,16 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tony Uzoma | DevOps Engineer</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-image: linear-gradient(to right, #432371, #6188e2);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 2s;
+        }
+        .skills {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skills li {
+            margin-bottom: 10px;
+        }
+        .skills li::before {
+            content: "🔹";
+            margin-right: 10px;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 1s;
+            animation: slideIn 2s;
+        }
+        .slide.active {
+            transform: translateX(0);
+        }
+        .slide_inactive {
+            transform: translateX(100%);
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My blog</h1>
+        <h1>Tony Uzoma</h1>
+        <p>DevOps Engineer</p>
     </header>
-    <main>
-        <img src="public/images/tony.jpg" alt="Profile Picture">
-        <p>Hello, this is my personal blog. Stay tuned for more updates!</p>
-    </main>
+    <div class="container">
+        <h2>About Me</h2>
+        <p>Hello, I'm Tony Uzoma, a passionate DevOps Engineer with expertise in:</p>
+        <ul class="skills">
+            <li>Containerization (Docker, Kubernetes)</li>
+            <li>Infrastructure as Code (Terraform, CloudFormation)</li>
+            <li>Agile Methodologies (Scrum, Kanban)</li>
+            <li>Cloud Computing (AWS, Azure, Google Cloud)</li>
+            <li>Scripting (Python, Bash, PowerShell)</li>
+        </ul>
+        <div class="slider">
+            <div class="slide active" style="background-image: url('public/images/tony.jpg');"></div>
+            <div class="slide" style="background-image: url('public/images/tony2.jpg');"></div>
+            <div class="slide" style="background-image: url('public/images/tony3.jpg');"></div>
+        </div>
+        <h2>Get in Touch</h2>
+        <p>Email: <a href="mailto:tyuzoma@gmail.com">tyuzoma@gmail.com</a></p>
+        <p>Phone: <a href="tel:+2348031155715">+2348031155715</a></p>
+    </div>
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }, 5000);
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
